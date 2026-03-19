@@ -1,0 +1,45 @@
+# Environment variables — NEVER commit these
+.env
+.env.*
+*.env
+
+# Firebase service account keys — NEVER commit these
+*-firebase-adminsdk-*.json
+firebase-*.json
+serviceAccountKey.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Database files (local only)
+*.db
+*.sqlite
+*.sqlite3
+chroma_data/
+graph_store.json
+vector_store.json
+
+# Uploads
+uploads/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+upload_error.txt
+
+# Test files
+test_*.pdf
+test_*.txt
