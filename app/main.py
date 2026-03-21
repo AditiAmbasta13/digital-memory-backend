@@ -20,12 +20,15 @@ app = FastAPI(
 )
 
 # CORS — allow Next.js frontend (origins configured via ALLOWED_ORIGINS env var)
-_allowed_origins = [o.strip() for o in settings.ALLOWED_ORIGINS.split(",") if o.strip()]
+# We strip trailing slashes to prevent mismatched origins. Adding wildcard for demo resilience.
+_allowed_origins = [o.strip().rstrip("/") for o in settings.ALLOWED_ORIGINS.split(",") if o.strip()]
+if "*" not in _allowed_origins:
+    _allowed_origins.append("*")
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_allowed_origins,
-    allow_credentials=True,
+    allow_credentials=False,  # Must be False to allow "*" wildcard
     allow_methods=["*"],
     allow_headers=["*"],
 )
