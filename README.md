@@ -2,6 +2,8 @@
 
 **Live Demo:** [https://digital-memory-web.vercel.app](https://digital-memory-web.vercel.app)
 
+**Frontend Github:** [https://github.com/AditiAmbasta13/digital-memory-frontend](https://github.com/AditiAmbasta13/digital-memory-frontend)
+
 **Digital Memory** is the AI-powered backend engine for processing knowledge. It ingests various content forms (PDFs, URLs, texts), extracts meaningful entities, relationships, summaries, and organizes everything into a semantic graph for search and visualization.
 
 ## 🚀 Quick Start
